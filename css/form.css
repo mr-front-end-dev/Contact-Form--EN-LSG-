@@ -1,6 +1,6 @@
 .form__labelText {
   width: 100%;
-  max-width: 150px;
+  max-width: 200px;
   display: inline-block;
   margin-right: 5px;
 }
@@ -16,7 +16,42 @@
   border: 1px solid hsl(0, 0%, 83%);
   padding: 10px;
   width: 100%;
-  max-width: 400px;
+  max-width: 350px;
+}
+
+.form__label--asterisk {
+  color: hsl(177, 70%, 41%);
+  font-weight: bold;
+}
+
+.form__field:required {
+  border: 1px solid hsl(210, 14%, 63%);
+}
+
+.form__field--textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form__field:invalid {
+  background-color:  hsl(203, 92%, 75%);
+}
+
+.form__field--colorpicker {
+  padding: 0;
+  border: none;
+}
+
+.form__field:disabled {
+  background-color: hsl(210, 14%, 73%);
+}
+
+.form__field:read-only {
+  background-color: hsl(210, 14%, 93%);
+}
+
+.form__field--select.form__field--select {
+  background-color: hsl(0, 0%, 100%);
 }
 
 .form__button {
