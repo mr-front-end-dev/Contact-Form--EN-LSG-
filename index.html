@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="css/form.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
   <title>[__Contact-Form__]</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 <body class="body">
   <div class="container">
@@ -19,17 +21,103 @@
         <p>
           <label>
             <span class="form__labelText">
-              Name:
+              Name <span class="form__label--asterisk">*</span>:
             </span> 
-            <input class="form__field" name="firstName">
+            <input class="form__field" name="firstName" required>
           </label>
         </p>
         <p>
           <label>
             <span class="form__labelText">
-              Surname:
+              Surname <span class="form__label--asterisk">*</span>:
             </span> 
-            <input class="form__field" name="lastName">
+            <input class="form__field" name="lastName" required>
+          </label>
+        </p>
+        <p>
+          <label>
+            <span class="form__labelText">
+              Some words about me <span class="form__label--asterisk">*</span>:
+            </span> 
+            <textarea class="form__field form__field--textarea" name="description" required></textarea>
+          </label>
+        </p>
+        <p>
+          <label>
+            <span class="form__labelText">
+              Eyes color:
+            </span> 
+            <select class="form__field form__field--select" name="eyesColor">
+              <option value="green">green</option>
+              <option value="blue">blue</option>
+              <option value="black">black</option>
+              <option value="brown">brown</option>
+            </select>
+          </label>
+        </p>
+        <p>
+          <label>
+            <span class="form__labelText">
+              Colorpicker:
+            </span> 
+            <input type="color" class="form__field form__field--colorpicker" name="Colorpicker">
+          </label>
+        </p>
+        <p>
+          <label>
+            <span class="form__labelText">
+              Range:
+            </span> 
+            <input type="range" class="form__field" name="range" min="0" max="250">
+          </label>
+        </p>
+        <p>
+          <label>
+            <span class="form__labelText">
+              Your CV <span class="form__label--asterisk">*</span>:
+            </span> 
+            <input type="file" class="form__field" name="cv"
+            >
+          </label>
+        </p>
+        <p>
+          <label>
+            <span class="form__labelText">
+              Element is turned off:
+            </span> 
+            <input class="form__field" name="disabled" disabled value="text">
+          </label>
+        </p>
+        <p>
+          <label>
+            <span class="form__labelText">
+              Element read-only:
+            </span> 
+            <input class="form__field" name="readonly" readonly value="text">
+          </label>
+        </p>
+        <p>
+          <label>
+            <span class="form__labelText">
+              Option 1:
+            </span> 
+            <input type="radio" class="form__field">
+          </label>
+        </p>
+        <p>
+          <label>
+            <span class="form__labelText">
+              Option 2:
+            </span> 
+            <input type="radio" class="form__field">
+          </label>
+        </p>
+        <p>
+          <label>
+            <span class="form__labelText">
+              Data <span class="form__label--asterisk">*</span>:
+            </span> 
+            <input class="form__field js-date" name="date" required>
           </label>
         </p>
       </fieldset>
@@ -40,5 +128,9 @@
       </p>
     </form>
   </div>
+
+  <script>
+    flatpickr(".js-date", {});
+  </script>
 </body>
 </html>
